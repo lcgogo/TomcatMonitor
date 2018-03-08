@@ -29,7 +29,7 @@ def StatusCheck():
 
 def LogCheck():
     with open(LOG_FILE, 'r') as f:
-        f.seek(-10000,2)
+        f.seek(-1000,2)
         for row in f.readlines():
             if re.search(ERROR_KEYWORD, row, re.IGNORECASE):
                 return 1
