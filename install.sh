@@ -1,7 +1,14 @@
 #!/bin/sh
 
-cp ./tomcat_monitor.py /usr/bin
-cat /usr/lib/systemd/system/tomcat_monitor.service << EOF
+if [ ! -e /usr/lib/systemd/system/tomcat.service ];then
+  yum install -y tomcat tomcat-webapps tomcat-admin-webapps git
+else
+  echo JAVA_OPTS=\"-Xms8m -Xmx16m\" >> /usr/share/tomcat/conf/tomcat.conf
+  systemctl restart tomcat
+fi
+
+\cp -f ./tomcat_monitor.py /usr/bin
+cat > /usr/lib/systemd/system/tomcat_monitor.service << EOF
 [Unit]
 Description=Tomcat Monitor service
 After=syslog.target network.target
