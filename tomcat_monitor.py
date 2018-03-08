@@ -44,7 +44,7 @@ def RequestTest():
         return 1
     except socket.error,err2:
         print(err2)
-        return 1
+        return 2
     else:
         return 0
 
