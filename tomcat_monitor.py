@@ -72,7 +72,7 @@ def main():
     else:
         resultRequestTest = 0
 
-    if resultStatusCheck != 0 or resultLogCheck !=0 or resultRequestTest !=0:        
+    if resultStatusCheck != 0 or resultLogCheck != 0 or resultRequestTest != 0:        
         print("Need restart tomcat.")
         RestartTomcat()
 
