@@ -1,2 +1,2 @@
 # TomcatMonitor
-Monitor Tomcat process
+Monitor Tomcat process if any error restart the process.
