@@ -8,8 +8,8 @@ import os
 import re
 
 URL = 'http://localhost:8080'
-SOCKET_TIMEOUT = 10
-RESTART_WAIT = 5
+SOCKET_TIMEOUT = 10 # Seconds.
+RESTART_WAIT = 5 # Seconds. Time wait after restart process.
 #LOG_FILE = "/var/log/tomcat/catalina.out"
 LOG_FILE = "/var/log/tomcat/catalina.2018-03-08.log"
 #ERROR_KEYWORD = "OutOfMemory"
